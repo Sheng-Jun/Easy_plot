@@ -1,20 +1,20 @@
 # Easy_plot
-A plot script of explicit functions: ℝ → ℝ  
+A plot script of explicit functions: ℝ → ℝ  <br/>
 
-I wrote this script as a shell command for quickly plotting some functions,which could plot linear, semilogx, semilogy, loglog scale in Cartesian coordinate, and also could plot in counterclockwise/clockwise Polar coordinate with different offset of the origin point.
+I wrote this script as a shell command for quickly plotting some functions,which could plot linear, semilogx, semilogy, loglog scale in Cartesian coordinate, and also could plot in counterclockwise/clockwise Polar coordinate with different offset of the origin point.<br/>
 
-Moreover, I wrote it as def Easy_Plot() in script, so people could write a python script and import this script to plot diagrams. In this way, people could assign the title, labels for x and y-axes, even Latex form string and assign the style of lines. Besides drawing normal functions, people could directly input an array of domain data and serial arrays of range data to plot diagrams!  
+Moreover, I wrote it as def Easy_Plot() in script, so people could write a python script and import this script to plot diagrams. In this way, people could assign the title, labels for x and y-axes, even Latex form string and assign the style of lines. Besides drawing normal functions, people could directly input an array of domain data and serial arrays of range data to plot diagrams!<br/>
 
-[The manual for using as a shell command]  
+[The manual for using as a shell command]<br/>
 
-python easy_plot.py [-d] [-D] [-r] [-R] [-P] [-C] [-o] [-p] [-e] [-i] [-A] [-N] 'equation 1 of x' 'equation 2 of x'...  
-                                                         (several functions [in numpy] marked by single/double qutoes)
+python easy_plot.py [-d] [-D] [-r] [-R] [-P] [-C] [-o] [-p] [-e] [-i] [-A] [-N] 'equation 1 of x' 'equation 2 of x'...<br/>
+(several functions [in numpy] marked by single/double qutoes)<br/>
  
-Options:
--d a,b
-  Let the domain to be [a,b]; the default is [-10,10].
--D a,b,B
-  Similar to '-d', but the log scale of the base B, the default for B is 10.
+Options:<br/>
+-d a,b<br/>
+  Let the domain to be [a,b]; the default is [-10,10].<br/>
+-D a,b,B<br/>
+  Similar to '-d', but the log scale of the base B, the default for B is 10.<br/>
 -r c,d
   Let the range to be [c,d]; the default is [-10,10].
   If input -r'auto' then it'll be auto scaled.
