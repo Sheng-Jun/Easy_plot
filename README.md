@@ -8,7 +8,7 @@ Moreover, I wrote it as def Easy_Plot() in script, so people could write a pytho
 
 _____________________________________[The manual for using as a shell command]_____________________________________
 
-python easy_plot.py [-d] [-D] [-r] [-R] [-P] [-C] [-o] [-p] [-e] [-i] [-A] [-N] 'equation 1 of x' 'equation 2 of x'...
+python easy_plot.py [-d] [-D] [-r] [-R] [-P] [-C] [-o] [-p] [-e] [-i] [-A] [-N] 'equation 1 of x' 'equation 2 of x'...\n
                                                          (several functions [in numpy] marked by single/double qutoes)
  
 Options:
