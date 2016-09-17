@@ -15,7 +15,7 @@ Options:<br/>
   Let the domain to be [a,b]; the default is [-10,10].<br/>
 -D a,b,B<br/>
   Similar to '-d', but the log scale of the base B, the default for B is 10.<br/>
--r c,d
+-r c,d<br/>
   Let the range to be [c,d]; the default is [-10,10].
   If input -r'auto' then it'll be auto scaled.
 -R c,d,B
