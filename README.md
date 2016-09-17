@@ -6,7 +6,7 @@ which could plot linear, semilogx, semilogy, loglog scale in Cartesian coordinat
 
 Moreover, I wrote it as def Easy_Plot() in script, so people could write a python script and import this script to plot diagrams. In this way, people could assign the title, labels for x and y-axes, even Latex form string and assign the style of lines. Besides drawing normal functions, people could directly input an array of domain data and serial arrays of range data to plot diagrams!
 
-_____________________________________[The manual for using as a shell command]_____________________________________
+[The manual for using as a shell command]
 
 python easy_plot.py [-d] [-D] [-r] [-R] [-P] [-C] [-o] [-p] [-e] [-i] [-A] [-N] 'equation 1 of x' 'equation 2 of x'...\n
                                                          (several functions [in numpy] marked by single/double qutoes)
@@ -46,7 +46,7 @@ This script provided some constants, please look them up.
 e.g.
 sj@machine ~$ python easy_plot.py -d 0,5**2 -r -5,5 -p 200*2 -e 0,2*10 1/x '-e**(1/x)' '5./2*cos(x/pi)'
 
-____________________________________The manual for using as a python module]___________________________________
+The manual for using as a python module
 
 [fig, ax, domain, func1, func2] = Easy_Plot(equ_list, *args, **kwargs)
 This function will return a list: [fig, ax, domain, func1, func2].
