@@ -10,7 +10,7 @@ _____________________________________[The manual for using as a shell command]__
 
 python easy_plot.py [-d] [-D] [-r] [-R] [-P] [-C] [-o] [-p] [-e] [-i] [-A] [-N] 'equation 1 of x' 'equation 2 of x'...
                                                          (several functions [in numpy] marked by single/double qutoes)
-
+ 
 Options:
 -d a,b
   Let the domain to be [a,b]; the default is [-10,10].
