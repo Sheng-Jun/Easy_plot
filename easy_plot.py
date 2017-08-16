@@ -108,7 +108,7 @@ Chi-squared distribution
 
 def Poisson(x, lamda):
 	"""
-Poisson
+Poisson distribution
 	"""
 	if x%1 > 0.5:
 		x = int(x+1.)
@@ -523,10 +523,6 @@ Easy_Plot: [INIT 0-3] kwargs={2}'.format(equ_list, args, kwargs))
 	func1 = [] #A list for saving arrays which are original range points
 	func2 = [] #A list for saving arrays which are auto-modified range points, but useless when lin, logx
 	for i in xrange(len(equ_list)):
-		func_expr = 'function[k] = {0}'.format(equ_list[i])
-		func_exec = compile(func_expr, '', 'exec')
-		function = empty(p_domain, float)
-		function2 = empty(p_domain, float)
 		if isinstance(equ_list[i], ndarray):
 			if p_domain != p_range:
 				print('Easy_Plot: [Error] The number of elements of one of arrays is wrong!')
@@ -534,6 +530,11 @@ Easy_Plot: [INIT 0-3] kwargs={2}'.format(equ_list, args, kwargs))
 			function = equ_list[i]
 			style = -style-0.5
 			if debug: print('Easy_Plot: [INIT 3-No.{0}] user assigns the range data.'.format(i))
+                else:
+		    func_expr = 'function[k] = {0}'.format(equ_list[i])
+		    func_exec = compile(func_expr, '', 'exec')
+		    function = empty(p_domain, float)
+		    function2 = empty(p_domain, float)
 		if debug: print('Easy_Plot: [style: No.{0}-1]={1}'.format(i, style))
 		# for quick colour and linestyle
 		if not pattern:

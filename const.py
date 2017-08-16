@@ -6,7 +6,7 @@ from numpy import *
 const = 'Qe   [C]\nqe   [esu=statC=g**0.5 cm**1.5 s**-1=erg**0.5 cm**0.5]\n\
 Me   [kg]\nme   [g]\nMp   [kg]\nmp   [g]\n\
 Msun [kg]\nRsun [m]\n\
-msun [g]\nrsun [cm]\neV   [J]\n\
+msun [g]\nrsun [cm]\neV   [J]\nev   [erg]\n\
 eps  [C**2 s**2 kg**-1 m**-3]\nmu   [kg m C**-2]\n\
 G    [m**3 s**-2 kg**-1]\nGG   [dyn cm**2 g**-2]\n\
 k    [J K**-1]\nkk   [erg K**-1]\n\
@@ -25,6 +25,7 @@ msun = 1.9891*10**33    #solar mass[g]
 Rsun = 1.392*10**9      #solar radius[m]
 rsun = 1.392*10**11      #solar radius[cm]
 eV = 1.602*10**-19      #Joule
+ev = 1.602*10**-12      #Erg
 eps = 8.8542*10**-12    #permittivity[C**2 s**2 kg**-1 m**-3]
 mu = 4*pi*10**-7        #permeability of free space[kg m C**-2]
 G = 6.67384*10**-11       #gravitational constant[m**3 s**-2 kg**-1]
