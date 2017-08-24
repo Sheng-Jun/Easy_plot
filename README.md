@@ -65,6 +65,13 @@ This script provided some constants, please look them up.
 
 [The manual for using as a python module]
 -------------------------------------------
+In the python shell, after typing:  
+
+    import sys
+    sys.path.append('the path of the dir containing easy_plot.py')
+    from easy_plot import *
+
+Then you could use the function  
 
 **[fig, ax, domain, func1, func2] = Easy\_Plot(equ\_list, \*args, \*\*kwargs)**  
 
@@ -79,7 +86,7 @@ In **case [a]**, func2 contains abs(negative function value).
 In **case [b]**, func2 contains negative function values.  
 Otherwise the corresponding items in func2 will be a string, 'useless'.  
 
-Some other modules also be imported  
+Some modules are already imported in easy\_plot.py   
 -------------------------------------------
 from numpy import *  
 from scipy import special  
