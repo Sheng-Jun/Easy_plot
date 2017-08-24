@@ -13,34 +13,34 @@ Moreover, I wrote it as def Easy_Plot() in script, so people could write a pytho
 **python easy\_plot.py \[-dDrRPCopeiAN\] 'equation 1 of x' 'equation 2 of x'**...(functions marked by single/double qutoes)  
  
 Options:  
-**-d a,b**
->  Let the domain to be [a,b]; the default is [-10,10].  
-**-D a,b,B**
+**-d a,b**  
+  Let the domain to be [a,b]; the default is [-10,10].  
+**-D a,b,B**  
   Similar to '-d', but the log scale of the base B, the default for B is 10.  
-**-r c,d**
+**-r c,d**  
   Let the range to be [c,d]; the default is [-10,10].  
   If input -r'auto' then it'll be auto scaled.  
-**-R c,d,B**  
+**-R c,d,B**    
   Similar to '-r', but the log scale of the base B, the default for B is 10.  
   If input -R'auto' then it'll be auto scaled.  
-**-P c,d**
+**-P c,d**  
   Polar coordinate in the counterclockwise direction with the range = [c,d].  
   If input -P'auto' then it'll be auto scaled.  
-**-C c,d**
+**-C c,d**  
   Similar to '-P', but in the clockwise direction.  
-**-o t**
+**-o t**  
   Let the offset for the origin be t radians, the default is 0.  
-**-p N**
+**-p N**  
   Let the size of the partition of the domain to be N; if not, the default is 500.  
-**-e p,q...**
+**-e p,q...**  
   Exclude points p, q... in the domain.  
-**-i n**
+**-i n**  
   Let 'inf' and '-inf' to be n, otherwise printing a warning.  
-**-A**
+**-A**  
   Print all function values of the last one fuction, the 2nd contains abs(negative), if semilogy/loglog.  
-**-N**
+**-N**  
   Don't print the figure.  
-**-h**
+**-h**  
   Print this help information.  
 This script provided some constants, please look them up.  
 
