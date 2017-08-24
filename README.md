@@ -8,7 +8,7 @@ I wrote this script as a shell command for quickly plotting some functions,which
 Moreover, I wrote it as def Easy\_Plot() in script, so people could write a python script and import this script to plot diagrams. In this way, people could assign the title, labels for x and y-axes, even Latex form string and assign the style of lines. Besides drawing normal functions, people could directly input an array of domain data and serial arrays of range data to plot diagrams!  
 
 
-The manual for using as a shell command
+[The manual for using as a shell command]
 -------------------------------------------
 
 **python easy\_plot.py \[-dDrRPCopeiAN\] 'equation 1 of x' 'equation 2 of x'**...(functions marked by single/double qutoes)  
@@ -60,10 +60,10 @@ Print this help information.
 This script provided some constants, please look them up.  
 
 ### An Example:  
-    sj@machine ~$ python easy\_plot.py -d 0,5\*\*2 -r -5,5 -p 200\*2 -e 0,2\*10 1/x '-e\*\*(1/x)' '5./2\*cos(x/pi)'  
+    sj@machine ~$ python easy_plot.py -d 0,5**2 -r -5,5 -p 200*2 -e 0,2*10 1/x '-e**(1/x)' '5./2*cos(x/pi)'  
 
 
-The manual for using as a python module
+[The manual for using as a python module]
 -------------------------------------------
 
 **[fig, ax, domain, func1, func2] = Easy\_Plot(equ\_list, \*args, \*\*kwargs)**  
@@ -176,18 +176,18 @@ If don't want to get a warning when the value is 'inf' or '-inf', then just let 
 Assign the title, xlabel, and ylabel. But the labels is only for the Cartesian.  
 
 ### Examples:  
-    result1 = Easy_Plot(['100*(1e4/(1e8+x**2)**0.5)**5'],  [r"$Plummer's model with 5$"],  3,  
-    x = [1e-2, 1e10],  y = [1e-4, 1e3],  
-    title = 'An empirical model',  xlabel = 'Radius', ylabel = 'Density')  
+    result1 = Easy_Plot(['100*(1e4/(1e8+x**2)**0.5)**5'], [r"$Plummer's model with 5$"], 3,  
+                        x=[1e-2, 1e10], y=[1e-4, 1e3],  
+                        title='An empirical model', xlabel='Radius', ylabel='Density')  
 
-    result2 = Easy_Plot('x/2/pi',  '$spiral$',  6,  
-    x = [0, 4*pi],  y = [0, 2],  
-    ls = 'r',  offset = 1.5*pi,  title = '$Sample$')  
+    result2 = Easy_Plot('x/2/pi', '$spiral$', 6,  
+                        x=[0, 4*pi], y=[0, 2],  
+                        ls='r', offset=1.5*pi, title='$Sample$')  
 
-    result3 = Easy_Plot(['abs(x)',  array([2.1, 2.5, 1.2, 3.5])],  ['test', 'data'],  4,  
-    x = array([-0.5*pi, pi, 0.5*pi, 0.75*pi]),  y = [0, 4],  
-    ls = ['k-', 'ro'])  
+    result3 = Easy_Plot(['abs(x)', array([2.1, 2.5, 1.2, 3.5])], ['test', 'data'], 4,  
+                        x=array([-0.5*pi, pi, 0.5*pi, 0.75*pi]), y=[0, 4],  
+                        ls=['k-', 'ro'])  
 
-    result4 = Easy_Plot(['1/x',  'sin(1/x)'],  [r'$\\frac{1}{x}$',  'oscillator'],  2,  
-    x = [-10, 10],  y = [0.1, 1.3],  
-    ls = ['k-', ''])
+    result4 = Easy_Plot(['1/x',  'sin(1/x)'], [r'$\\frac{1}{x}$', 'oscillator'], 2,  
+                        x=[-10, 10], y=[0.1, 1.3],  
+                        ls=['k-', ''])
