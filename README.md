@@ -7,24 +7,24 @@ I wrote this script as a shell command for quickly plotting some functions,which
 
 Moreover, I wrote it as def Easy_Plot() in script, so people could write a python script and import this script to plot diagrams. In this way, people could assign the title, labels for x and y-axes, even Latex form string and assign the style of lines. Besides drawing normal functions, people could directly input an array of domain data and serial arrays of range data to plot diagrams!  
 
-**[The manual for using as a shell command]**  
+[The manual for using as a shell command] 
 -------------------------------------------
 
-**python easy_plot.py \[-dDrRPCopeiAN\] 'equation 1 of x' 'equation 2 of x'**...(functions \[in numpy\] marked by single/double qutoes)  
+**python easy\_plot.py \[-dDrRPCopeiAN\] 'equation 1 of x' 'equation 2 of x'**...(functions marked by single/double qutoes)  
  
 Options:  
 **-d a,b**
-  Let the domain to be \[a,b\]; the default is \[-10,10\].  
+*  Let the domain to be [a,b]; the default is [-10,10].  
 **-D a,b,B**
   Similar to '-d', but the log scale of the base B, the default for B is 10.  
 **-r c,d**
-  Let the range to be \[c,d\]; the default is \[-10,10\].  
+  Let the range to be [c,d]; the default is [-10,10].  
   If input -r'auto' then it'll be auto scaled.  
 **-R c,d,B**  
   Similar to '-r', but the log scale of the base B, the default for B is 10.  
   If input -R'auto' then it'll be auto scaled.  
 **-P c,d**
-  Polar coordinate in the counterclockwise direction with the range = \[c,d\].  
+  Polar coordinate in the counterclockwise direction with the range = [c,d].  
   If input -P'auto' then it'll be auto scaled.  
 **-C c,d**
   Similar to '-P', but in the clockwise direction.  
@@ -47,10 +47,10 @@ This script provided some constants, please look them up.
 An example:  
 sj@machine ~$ python easy\_plot.py -d 0,5\*\*2 -r -5,5 -p 200\*2 -e 0,2\*10 1/x '-e\*\*(1/x)' '5./2\*cos(x/pi)'  
 
-**[The manual for using as a python module]**  
+[The manual for using as a python module]
 -------------------------------------------
 
-**[fig, ax, domain, func1, func2] = Easy_Plot(equ_list, *args, \**kwargs)**
+**[fig, ax, domain, func1, func2] = Easy_Plot(equ_list, \*args, \*\*kwargs)**
 This function will return a list: *[fig, ax, domain, func1, func2]*.
   A) **fig** is a matplotlib.figure.Figure object, but if user inputs their  
     own AxesSubplot, fig will be a float number 0.  
