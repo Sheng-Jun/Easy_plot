@@ -14,7 +14,7 @@ Moreover, I wrote it as def Easy_Plot() in script, so people could write a pytho
  
 Options:  
 **-d a,b**
-*  Let the domain to be [a,b]; the default is [-10,10].  
+>  Let the domain to be [a,b]; the default is [-10,10].  
 **-D a,b,B**
   Similar to '-d', but the log scale of the base B, the default for B is 10.  
 **-r c,d**
