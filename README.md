@@ -111,8 +111,8 @@ If some part is beyond the range, it'll be marked by another label automatically
 **'debug'**  
 Print the debug info.  
 
-**[kwargs]**  
-[The default domain = [-10,10], range = [-10,10], and base of log-scale = 10]  
+### [kwargs]  
+The default domain = [-10,10], range = [-10,10], and base of log-scale = 10  
 
 **x/domain = [a, b]**  
 Let the domain be [a,b]. If log-scale, the base will be 10.  
