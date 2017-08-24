@@ -3,9 +3,9 @@ Easy\_plot
 A python module of explicit functions: ℝ → ℝ
 -------------------------------------------
 
-I wrote this script as a shell command for quickly plotting some functions,which could plot linear, semilogx, semilogy, loglog scale in Cartesian coordinate, and also could plot in counterclockwise/clockwise Polar coordinate with different offset of the origin point.  
+I wrote this module as a shell command for quickly plotting some functions in linear, semilogx, semilogy, or loglog scales in the Cartesian coordinates, or in the counterclockwise/clockwise Polar coordinates with different offsets of the origin point.  
 
-Moreover, I wrote it as def Easy\_Plot() in script, so people could write a python script and import this script to plot diagrams. In this way, people could assign the title, labels for x and y-axes, even Latex form string and assign the style of lines. Besides drawing normal functions, people could directly input an array of domain data and serial arrays of range data to plot diagrams!  
+Moreover, I wrote it as a function, Easy\_Plot(), in the module, so it's convenient to write a python script and import this module to plot diagrams. In this case, there are more features: assigning the title, labels for x and y-axes, (even strings in the Latex forms) and the style of lines. Besides drawing explicit functions, it's also accepted to directly input an array of data as the domain and some arrays of data as the range to plot a diagram!  
 
 
 [The manual for using as a shell command]
