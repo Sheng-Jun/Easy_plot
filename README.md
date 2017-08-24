@@ -60,7 +60,7 @@ Print this help information.
 This script provided some constants, please look them up.  
 
 ### An Example:  
-sj@machine ~$ python easy\_plot.py -d 0,5\*\*2 -r -5,5 -p 200\*2 -e 0,2\*10 1/x '-e\*\*(1/x)' '5./2\*cos(x/pi)'  
+    sj@machine ~$ python easy\_plot.py -d 0,5\*\*2 -r -5,5 -p 200\*2 -e 0,2\*10 1/x '-e\*\*(1/x)' '5./2\*cos(x/pi)'  
 
 
 The manual for using as a python module
@@ -79,7 +79,8 @@ In **case [a]**, func2 contains abs(negative function value).
 In **case [b]**, func2 contains negative function values.  
 Otherwise the corresponding items in func2 will be a string, 'useless'.  
 
-### Some other modules also be imported:  
+Some other modules also be imported  
+-------------------------------------------
 from numpy import *  
 from scipy import special  
 import matplotlib.pyplot as plt  
@@ -87,22 +88,23 @@ from matplotlib import rc
 from getopt import getopt  
 from sys import argv  
 
-### Here add some variables, and Latex strings are allowed:
-##### [equ\_list] (necessary!)  
+Here add some variables, and Latex strings are allowed  
+-------------------------------------------
+### [equ\_list] (necessary!)  
 A list, which can contain strings are functions of x, or/and arrays(numpy) that contains function values. And you can only give a string or an array, if just one function.  
 If equ\_list just are some arrays, you can directly see the shape without giving domain and range, but the dimension of them must be the same.  
  
 This script also provides a constant values list:  print(const)  
 And my function list:  print(func)  
 
-##### [args]  
+### [args]  
 **equ\_label**  
 A list of label of functions, e.g.['$x$']; otherwise they'll be ordinal numbers.  
  
 **style**  
-**Cartesian coordinate**: 
+Cartesian coordinate: 
 0: linear plot(default), 1: semilogx, 2: semilogy, 3: loglog.  
-**Polar coordinate**: 
+Polar coordinate: 
 4: counterclockwise, 6: clockwise.  
 If some part is beyond the range, it'll be marked by another label automatically.  
 
@@ -118,7 +120,7 @@ Let the domain be [a,b]. If log-scale, the base will be 10.
 **x/domain = [a, b, c]**  
 Let the domain be [a,b], and the base of log-scale be c.  
 
-**x/domain = an array(numpy) of data points**  
+**x/domain = a numpy array of data points**  
 In this case, the x-scaling is auto.  
 
 **x/domain = [(an array), a, b]**  
@@ -173,23 +175,19 @@ If don't want to get a warning when the value is 'inf' or '-inf', then just let 
 **title = '...', xlabel = '...', ylabel = '...'**  
 Assign the title, xlabel, and ylabel. But the labels is only for the Cartesian.  
 
-### An Example:  
-result1 = Easy\_Plot(\\
-['100\*(10\*\*4/(10\*\*8+x\*\*2)\*\*0.5)\*\*5'],  ['$Plummer\\'s\\ model\\ with\\ 5$'],  3,  
-x = [10\*\*-2, 10\*\*10],  y = [10\*\*-4, 10\*\*3],  
-title = '$An\\ empirical\\ model$',  xlabel = '$Radius$', ylabel = '$Density$')  
+### Examples:  
+    result1 = Easy_Plot(['100*(1e4/(1e8+x**2)**0.5)**5'],  [r"$Plummer's model with 5$"],  3,  
+    x = [1e-2, 1e10],  y = [1e-4, 1e3],  
+    title = 'An empirical model',  xlabel = 'Radius', ylabel = 'Density')  
 
-result2 = Easy\_Plot(\\
-'x/2/pi',  '$spiral$',  6,  
-x = [0, 4\*pi],  y = [0, 2],  
-ls = 'r',  offset = 1.5\*pi,  title = '$Sample$')  
+    result2 = Easy_Plot('x/2/pi',  '$spiral$',  6,  
+    x = [0, 4*pi],  y = [0, 2],  
+    ls = 'r',  offset = 1.5*pi,  title = '$Sample$')  
 
-result3 = Easy\_Plot([\\
-'abs(x)',  array([2.1, 2.5, 1.2, 3.5])],  ['test', 'data'],  4,  
-x = array([-0.5\*pi, pi, 0.5\*pi, 0.75\*pi]),  y = [0, 4],  
-ls = ['k-', 'ro'])  
+    result3 = Easy_Plot(['abs(x)',  array([2.1, 2.5, 1.2, 3.5])],  ['test', 'data'],  4,  
+    x = array([-0.5*pi, pi, 0.5*pi, 0.75*pi]),  y = [0, 4],  
+    ls = ['k-', 'ro'])  
 
-result4 = Easy\_Plot(\\
-['1/x',  'sin(1/x)'],  ['$\\frac{1}{x}$',  'oscillator'],  2,  
-x = [-10, 10],  y = [0.1, 1.3],  
-ls = ['k-', ''])
+    result4 = Easy_Plot(['1/x',  'sin(1/x)'],  [r'$\\frac{1}{x}$',  'oscillator'],  2,  
+    x = [-10, 10],  y = [0.1, 1.3],  
+    ls = ['k-', ''])
