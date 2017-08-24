@@ -1,5 +1,7 @@
-# Easy_plot
-A plot script of explicit functions: ℝ → ℝ   
+Easy_plot
+=========
+A plot script of explicit functions: ℝ → ℝ
+-------------------------------------------
 
 I wrote this script as a shell command for quickly plotting some functions,which could plot linear, semilogx, semilogy, loglog scale in Cartesian coordinate, and also could plot in counterclockwise/clockwise Polar coordinate with different offset of the origin point.  
 
@@ -7,21 +9,21 @@ Moreover, I wrote it as def Easy_Plot() in script, so people could write a pytho
 
 **[The manual for using as a shell command]**  
 
-python easy_plot.py [-d] [-D] [-r] [-R] [-P] [-C] [-o] [-p] [-e] [-i] [-A] [-N] 'equation 1 of x' 'equation 2 of x'...(several functions [in numpy] marked by single/double qutoes)  
+python easy_plot.py \[-dDrRPCopeiAN\] 'equation 1 of x' 'equation 2 of x'...(several functions \[in numpy\] marked by single/double qutoes)  
  
 Options:  
 -d a,b  
-  Let the domain to be [a,b]; the default is [-10,10].  
+  Let the domain to be \[a,b\]; the default is \[-10,10\].  
 -D a,b,B  
   Similar to '-d', but the log scale of the base B, the default for B is 10.  
 -r c,d  
-  Let the range to be [c,d]; the default is [-10,10].  
+  Let the range to be \[c,d\]; the default is \[-10,10\].  
   If input -r'auto' then it'll be auto scaled.  
 -R c,d,B  
   Similar to '-r', but the log scale of the base B, the default for B is 10.  
   If input -R'auto' then it'll be auto scaled.  
 -P c,d  
-  Polar coordinate in the counterclockwise direction with the range = [c,d].  
+  Polar coordinate in the counterclockwise direction with the range = \[c,d\].  
   If input -P'auto' then it'll be auto scaled.  
 -C c,d  
   Similar to '-P', but in the clockwise direction.  
@@ -42,11 +44,11 @@ Options:
 This script provided some constants, please look them up.  
 
 e.g.  
-sj@machine ~$ python easy_plot.py -d 0,5**2 -r -5,5 -p 200*2 -e 0,2*10 1/x '-e**(1/x)' '5./2*cos(x/pi)'  
+sj@machine ~$ python easy_plot.py -d 0,5\**2 -r -5,5 -p 200*2 -e 0,2*10 1/x '-e\**(1/x)' '5./2*cos(x/pi)'  
 
 **[The manual for using as a python module]**  
 
-[fig, ax, domain, func1, func2] = Easy_Plot(equ_list, *args, **kwargs)  
+[fig, ax, domain, func1, func2] = Easy_Plot(equ_list, *args, \**kwargs)  
 This function will return a list: [fig, ax, domain, func1, func2].  
   A) fig is a matplotlib.figure.Figure object, but if user inputs their  
     own AxesSubplot, fig will be a float number 0.  
