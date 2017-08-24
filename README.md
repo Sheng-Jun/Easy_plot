@@ -8,6 +8,7 @@ I wrote this script as a shell command for quickly plotting some functions,which
 Moreover, I wrote it as def Easy_Plot() in script, so people could write a python script and import this script to plot diagrams. In this way, people could assign the title, labels for x and y-axes, even Latex form string and assign the style of lines. Besides drawing normal functions, people could directly input an array of domain data and serial arrays of range data to plot diagrams!  
 
 ### [The manual for using as a shell command] 
+-------------------------------------------
 
 **python easy\_plot.py \[-dDrRPCopeiAN\] 'equation 1 of x' 'equation 2 of x'**...(functions marked by single/double qutoes)  
  
