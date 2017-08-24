@@ -1,18 +1,17 @@
-Easy_plot
-=========
-A plot script of explicit functions: ℝ → ℝ
+Easy\_plot
+==========
+A python module of explicit functions: ℝ → ℝ
 -------------------------------------------
 
 I wrote this script as a shell command for quickly plotting some functions,which could plot linear, semilogx, semilogy, loglog scale in Cartesian coordinate, and also could plot in counterclockwise/clockwise Polar coordinate with different offset of the origin point.  
 
 Moreover, I wrote it as def Easy_Plot() in script, so people could write a python script and import this script to plot diagrams. In this way, people could assign the title, labels for x and y-axes, even Latex form string and assign the style of lines. Besides drawing normal functions, people could directly input an array of domain data and serial arrays of range data to plot diagrams!  
 
-[The manual for using as a shell command] 
--------------------------------------------
+###[The manual for using as a shell command] 
 
 **python easy\_plot.py \[-dDrRPCopeiAN\] 'equation 1 of x' 'equation 2 of x'**...(functions marked by single/double qutoes)  
  
-Options:  
+####Options:  
 **-d a,b**  
   Let the domain to be [a,b]; the default is [-10,10].  
 **-D a,b,B**  
@@ -44,7 +43,7 @@ Options:
   Print this help information.  
 This script provided some constants, please look them up.  
 
-An example:  
+####An example:  
 sj@machine ~$ python easy\_plot.py -d 0,5\*\*2 -r -5,5 -p 200\*2 -e 0,2\*10 1/x '-e\*\*(1/x)' '5./2\*cos(x/pi)'  
 
 [The manual for using as a python module]
