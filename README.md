@@ -1,18 +1,18 @@
 Easy\_plot
 ==========
-A python module of explicit functions: ℝ → ℝ
+A python script of explicit functions: ℝ → ℝ
 -------------------------------------------
 
-I wrote this module as a shell command for quickly plotting some functions in linear, semilogx, semilogy, or loglog scales in the Cartesian coordinates, or in the counterclockwise/clockwise Polar coordinates with different offsets of the origin point.  
+I wrote this script as a shell command for quickly plotting some functions in linear, semilogx, semilogy, or loglog scales in the Cartesian coordinates, or in the counterclockwise/clockwise Polar coordinates with different offsets of the origin point.  
 
-Moreover, I wrote it as a function, Easy\_Plot(), in the module, so it's convenient to write a python script and import this module to plot diagrams. In this case, there are more features: assigning the title, labels for x and y-axes, (even strings in the Latex forms) and the style of lines. Besides drawing explicit functions, it's also accepted to directly input an array of data as the domain and some arrays of data as the range to plot a diagram!  
+Moreover, I wrote it as a function, Easy\_Plot(), in the script, so it's convenient to write a python script and import this module to plot diagrams. In this case, there are more features: assigning the title, labels for x and y-axes, (even strings in the Latex forms) and the style of lines. Besides drawing explicit functions, it's also accepted to directly input an array of data as the domain and some arrays of data as the range to plot a diagram!  
 
 
 [The manual for using as a shell command]
 -------------------------------------------
 
 **python easy\_plot.py \[-dDrRPCopeiAN\] 'equation 1 of x' 'equation 2 of x'**...(functions marked by single/double qutoes)  
- 
+  
 ### Options:  
 **-d a,b**  
 Let the domain to be [a,b]; the default is [-10,10].  
@@ -62,16 +62,17 @@ This script provided some constants, please look them up.
 ### An Example:  
     sj@machine ~$ python easy_plot.py -d 0,5**2 -r -5,5 -p 200*2 -e 0,2*10 1/x '-e**(1/x)' '5./2*cos(x/pi)'  
 
+![The output from cmd](cmd_output.png)
 
 [The manual for using as a python module]
 -------------------------------------------
-In the python shell, after typing:  
+In the python shell, import easy\_plot with the following code:  
 
     import sys
     sys.path.append('the path of the dir containing easy_plot.py')
     from easy_plot import *
 
-Then you could use the function  
+Then you could use the function:  
 
 **[fig, ax, domain, func1, func2] = Easy\_Plot(equ\_list, \*args, \*\*kwargs)**  
 
@@ -81,10 +82,14 @@ Then you could use the function
 
 **domain** is a array of points of the domain.  
 
-**func1** is a list of arrays of function values of equ\_list, but the values beyond the range (when *[a]* semilogy/loglog, and *[b]* polar) will be modified, and the original one will be stored in the corresponding array in list **func2**.  
+**func1** is a list of arrays of function values of equ\_list, but the values beyond the range (when **[a] semilogy/loglog**, and **[b] polar**) will be modified, and the original one will be stored in the corresponding array in list **func2**.  
 In **case [a]**, func2 contains abs(negative function value).  
 In **case [b]**, func2 contains negative function values.  
 Otherwise the corresponding items in func2 will be a string, 'useless'.  
+
+In order to show the figure, please execute:  
+
+    plt.show()
 
 Some modules are already imported in easy\_plot.py   
 -------------------------------------------
@@ -183,18 +188,27 @@ If don't want to get a warning when the value is 'inf' or '-inf', then just let 
 Assign the title, xlabel, and ylabel. But the labels is only for the Cartesian.  
 
 ### Examples:  
-    result1 = Easy_Plot(['100*(1e4/(1e8+x**2)**0.5)**5'], [r"$Plummer's model with 5$"], 3,  
-                        x=[1e-2, 1e10], y=[1e-4, 1e3],  
+    result1 = Easy_Plot(['1./(1.+(x/10)**2)**(5/2.)'], ["Plummer's model with $\eta =5$"], 3,  
+                        x=[1e-2, 1e2], y=[1e-4, 1e3],  
                         title='An empirical model', xlabel='Radius', ylabel='Density')  
+
+![The output from module1](module_output1.png)
 
     result2 = Easy_Plot('x/2/pi', '$spiral$', 6,  
                         x=[0, 4*pi], y=[0, 2],  
                         ls='r', offset=1.5*pi, title='$Sample$')  
 
+![The output from module2](module_output2.png)
+
     result3 = Easy_Plot(['abs(x)', array([2.1, 2.5, 1.2, 3.5])], ['test', 'data'], 4,  
                         x=array([-0.5*pi, pi, 0.5*pi, 0.75*pi]), y=[0, 4],  
                         ls=['k-', 'ro'])  
 
-    result4 = Easy_Plot(['1/x',  'sin(1/x)'], [r'$\\frac{1}{x}$', 'oscillator'], 2,  
+![The output from module3](module_output3.png)
+
+    result4 = Easy_Plot(['1/x',  'sin(1/x)'], [r'$\frac{1}{x}$', 'oscillator'], 2,  
                         x=[-10, 10], y=[0.1, 1.3],  
                         ls=['k-', ''])
+
+![The output from module4](module_output4.png)
+
