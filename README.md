@@ -56,8 +56,7 @@ Don't print the figure.
 **-h**  
 Print this help information.  
   
-  
-This script provided some constants, please look them up.  
+**const.py** provides some constants, please look them up.  
 
 ### An Example:  
     sj@machine ~$ python easy_plot.py -d 0,5**2 -r -5,5 -p 200*2 -e 0,2*10 1/x '-e**(1/x)' '5./2*cos(x/pi)'  
@@ -80,7 +79,7 @@ Then you could use the function:
 
 **ax** is a matplotlib.axes.AxesSubplot object.  
 
-**domain** is a array of points of the domain.  
+**domain** is an array of points of the domain.  
 
 **func1** is a list of arrays of function values of equ\_list, but the values beyond the range (when **[a] semilogy/loglog**, and **[b] polar**) will be modified, and the original one will be stored in the corresponding array in list **func2**.  
 In **case [a]**, func2 contains abs(negative function value).  
@@ -114,9 +113,9 @@ And my function list:  print(func)
 A list of label of functions, e.g.['$x$']; otherwise they'll be ordinal numbers.  
  
 **style**  
-Cartesian coordinate: 
+Cartesian coordinates: 
 0: linear plot(default), 1: semilogx, 2: semilogy, 3: loglog.  
-Polar coordinate: 
+Polar coordinates: 
 4: counterclockwise, 6: clockwise.  
 If some part is beyond the range, it'll be marked by another label automatically.  
 
@@ -157,7 +156,7 @@ The y-scaling is auto, and assign the base of log-scale.
 Let the offset for the origin be t radians, the default is 0. Operators are allowed.  
 
 **ax = a matplotlib.axes.AxesSubplot object**  
-By this, user create a figure with a set of subplots, then use Easy\_Plot() to plot one of them.  
+With this feature, ser create a figure with a set of subplots, then use Easy\_Plot() to plot one of them.  
 For example,  
 fig, (ax1, ax2) = subplots(2, 1, sharex=True)  
 a = Easy\_Plot('x', ax=ax1,...)  
@@ -188,7 +187,7 @@ If don't want to get a warning when the value is 'inf' or '-inf', then just let 
 Assign the title, xlabel, and ylabel. But the labels is only for the Cartesian.  
 
 ### Examples:  
-    result1 = Easy_Plot(['1./(1.+(x/10)**2)**(5/2.)'], ["Plummer's model with $\eta =5$"], 3,  
+    result1 = Easy_Plot('1./(1.+(x/10)**2)**(5/2.)', "Plummer's model with $\eta =5$", 3,  
                         x=[1e-2, 1e2], y=[1e-4, 1e3],  
                         title='An empirical model', xlabel='Radius', ylabel='Density')  
 
