@@ -120,7 +120,7 @@ Poisson distribution
 
 def Easy_Plot(equ_list, *args, **kwargs):
 	"""
-This function will return a list: [fig, ax, domain, func1, func2],\n\
+This function will return a tuple: (fig, ax, domain, func1, func2),\n\
 A) fig is a matplotlib.figure.Figure object, but if user inputs their\n\
    own AxesSubplot, fig will be a float number 0.\n\
 B) ax is a matplotlib.axes.AxesSubplot object.\n\
@@ -731,7 +731,7 @@ Easy_Plot: >>Finished plotting the func. No.{1}'.format(fig, i+1))
 		ax.grid(True)
 	#====================================================================================#
 	if debug: print('Easy_Plot: ---The end of plotting---\n')
-	return [fig, ax, domain, func1, func2]
+	return (fig, ax, domain, func1, func2)
 
 def PN(input_array):
 	"""
