@@ -187,6 +187,28 @@ If don't want to get a warning when the value is 'inf' or '-inf', then just let 
 **title = '...', xlabel = '...', ylabel = '...'**  
 Assign the title, xlabel, and ylabel. But the labels is only for the Cartesian.  
 
+The type of variables and their default values:  
+	|Option     |Accepted assignment                      |Default       |
+    |-----|-----|-----|
+	|equ_list   |string/array/list of string(s)/array(s)  |[NECESSARY!!] |
+	|style      |int                                      |0             |
+	|equ_label  |string/list of string(s)                 |Ordinal number|
+	|ls         |string/list of string(s)                 |python default|
+	|color      |string/list of string(s)                 |python default|
+	|alpha      |float/list of number(s)                  |python default|
+	|loc	    |int                                      |0             |
+	|domain     |array/bracket of numbers -*              |[-10,10]      |
+	|range      |'auto'/bracket of numbers -*             |[-10,10]      |
+	|base of log-scale|number                     |base of log-scale = 10|
+	|offset     |number -*                                |0             |
+	|partition  |int -*                                   |500           |
+	|exclusion  |list of number(s) -*                     |(empty)       |
+	|inf        |number -*                                |(empty)       |
+    |title      |string                                   |(empty)       |
+    |xlabel     |string                                   |(empty)       |
+    |ylabel     |string                                   |(empty)       |
+	Suffix -*: Given with mathematical operators are allowed.  
+
 ### Examples:  
     result1 = Easy_Plot(['1./(1.+(x/10)**2)**(5/2.)'], ["Plummer's model with $\eta =5$"], 3,  
                         x=[1e-2, 1e2], y=[1e-4, 1e3],  
