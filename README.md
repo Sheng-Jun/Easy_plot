@@ -73,7 +73,7 @@ In the python shell, import easy\_plot with the following code:
 
 Then you could use the function:  
 
-**[fig, ax, domain, func1, func2] = Easy\_Plot(equ\_list, \*args, \*\*kwargs)**  
+**fig, ax, domain, func1, func2 = Easy\_Plot(equ\_list, \*args, \*\*kwargs)**  
 
 **fig** is a matplotlib.figure.Figure object, but if user inputs their own AxesSubplot, fig will be a float number 0.  
 
