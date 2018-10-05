@@ -3,16 +3,26 @@
 from numpy import *
 
 #the constants and the functions list
-const = 'Qe   [C]\nqe   [esu=statC=g**0.5 cm**1.5 s**-1=erg**0.5 cm**0.5]\n\
-Me   [kg]\nme   [g]\nMp   [kg]\nmp   [g]\n\
-Msun [kg]\nRsun [m]\n\
-msun [g]\nrsun [cm]\neV   [J]\nev   [erg]\n\
-eps  [C**2 s**2 kg**-1 m**-3]\nmu   [kg m C**-2]\n\
-G    [m**3 s**-2 kg**-1]\nGG   [dyn cm**2 g**-2]\n\
-k    [J K**-1]\nkk   [erg K**-1]\n\
-h    [J s=kg m**2 s**-1]\nh_bar[J s]\nhh   [erg s]\nhe   [eV s]\n\
-c    [m/s]\ncc   [cm/s]\nAU   [m]\nau   [cm]\nLY   [m]\nly   [cm]\n\
-PC   [m]\npc   [cm]\nyr_s [s]\nmole\nH\ncs10 [cm/s]'
+const = \
+'Qe  [C]   qe   [esu=statC=g**0.5 cm**1.5 s**-1=erg**0.5 cm**0.5]\n\
+Me   [kg]  me   [g]  Mp   [kg]  mp   [g]\n\
+Msun [kg]  Rsun [m]  Lsun [W]\n\
+msun [g]   rsun [cm] lsun [ers s**-1]\n\
+eV   [J]   ev   [erg]\n\
+eps  [C**2 s**2 kg**-1 m**-3]\n\
+mu   [kg m C**-2]\n\
+G    [m**3 s**-2 kg**-1]  GG   [dyn cm**2 g**-2]\n\
+k    [J K**-1]            kk   [erg K**-1]\n\
+h    [J s=kg m**2 s**-1]  h_bar[J s]\n\
+hh   [erg s]              he   [eV s]\n\
+c    [m/s]                cc   [cm/s]\n\
+AU   [m]                  au   [cm]\n\
+LY   [m]                  ly   [cm]\n\
+PC   [m]                  pc   [cm]\n\
+yr_s [s]\n\
+mole\n\
+H\n\
+cs10 [cm/s]'
 
 Qe = 1.602176565*10**-19  #electron charge[C]
 qe = 4.80320451*10**-10   #electron charge[esu=statC=g**0.5 cm**1.5 s**-1=erg**0.5 cm**0.5]
@@ -23,7 +33,9 @@ mp = 1.6726*10**-24     #proton mass[g]
 Msun = 1.9891*10**30    #solar mass[kg]
 msun = 1.9891*10**33    #solar mass[g]
 Rsun = 1.392*10**9      #solar radius[m]
-rsun = 1.392*10**11      #solar radius[cm]
+rsun = 1.392*10**11     #solar radius[cm]
+Lsun = 3.828*10**26     #solar luminosity[W]
+lsun = 3.828*10**33     #solar luminosity[erg s**-1]
 eV = 1.602*10**-19      #Joule
 ev = 1.602*10**-12      #Erg
 eps = 8.8542*10**-12    #permittivity[C**2 s**2 kg**-1 m**-3]
@@ -49,3 +61,8 @@ mole = 6.02214129*10**23
 H = 1.00794
 cs10 = sqrt(412424231.1507937) #cm/s
 
+def main():
+    print(const)
+
+if __name__ == '__main__':
+    main()
